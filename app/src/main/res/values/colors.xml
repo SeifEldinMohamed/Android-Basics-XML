@@ -2,4 +2,12 @@
 <resources>
     <color name="red">#FF0000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="cardBackground">#D90000</color>
+    <color name="foregroundColor">#FFEB3B</color>
+    <color name="colorPressed">#101010</color>
+    <color name="colorFocused">#4CAF50</color>
+    <color name="colorDefault">#03A9F4</color>
+    <color name="colorBackground">#FFFFFF</color>
+
 </resources>

@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">First Session</string>
     <string name="person_name">Seif Mohamed</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_item">Select an item</string>
+    <string-array name="spinner_items">
+        <item>Item 1</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+    </string-array>
 </resources>

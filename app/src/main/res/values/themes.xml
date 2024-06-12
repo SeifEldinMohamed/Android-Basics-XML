@@ -1,9 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.FirstSession" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="DefaultAppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+    
+    <style name="CustomButtonStyle">
+        <item name="android:background">#FF5722</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:padding">16dp</item>
+    </style>
 
-    <style name="Theme.FirstSession" parent="Base.Theme.FirstSession" />
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+    </style>
+
 </resources>

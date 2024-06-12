@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_app_settings"
+        android:iconTint="@color/black"
+        app:showAsAction="never" />
+
+</menu>
+<!--
+<menu>: Root element defining the menu.
+<item>: Represents a single menu item.
+android:id: Unique ID for the menu item.
+android:title: Text to display for the menu item.
+android:showAsAction: Defines How the item should appear in the action bar.
+-->
