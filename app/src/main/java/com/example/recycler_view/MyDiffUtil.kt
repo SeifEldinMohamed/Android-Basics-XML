@@ -2,7 +2,7 @@ package com.example.recycler_view
 
 import androidx.recyclerview.widget.DiffUtil
 
-class MyDiffUtil<String>(
+class MyDiffUtil(
     private val oldList: List<String>,
     private val newList: List<String>
 ) : DiffUtil.Callback() {

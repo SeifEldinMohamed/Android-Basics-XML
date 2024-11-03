@@ -12,9 +12,11 @@ import com.example.firstsession.R
 // This part inherits from RecyclerView.Adapter. This means MyAdapter acts as an adapter for a RecyclerView,
 // providing the data and views for its elements.
 class MyAdapter(private val items: List<String>) : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-         val textView: TextView = itemView.findViewById(R.id.textView)
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+         val textView2: TextView = view.findViewById(R.id.textView)
     }
+
+
     // This defines an inner class named ViewHolder that extends RecyclerView.ViewHolder.
     // ViewHolder holds references to the views that make up each item in your list.
     // The constructor takes a View argument, which represents the root layout of a single item in the RecyclerView.
@@ -43,7 +45,7 @@ class MyAdapter(private val items: List<String>) : RecyclerView.Adapter<MyAdapte
     // LayoutInflater and returns a new ViewHolder instance.
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-         holder.textView.text = items[position]
+         holder.textView2.text = items[position]
         // itemView: A ViewHolder describes an item view and metadata about its place within the RecyclerView.
          holder.itemView.setOnClickListener {
              Toast.makeText(
@@ -68,6 +70,7 @@ class MyAdapter(private val items: List<String>) : RecyclerView.Adapter<MyAdapte
     // the clicked item's string data as an argument.
 
     override fun getItemCount(): Int = items.size
+
 
     // This method simply returns the size of the items list,
     // indicating the total number of items in the dataset.

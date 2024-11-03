@@ -2,6 +2,7 @@ package com.example.intents.explicit
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.MainActivity3
 import com.example.firstsession.Main2Activity
 import com.example.firstsession.R
+import com.example.firstsession.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,31 +25,40 @@ class MainActivity : AppCompatActivity() {
             //  textViewResult.text = resultText
         }
     }
+    lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         // Creating an explicit intent to start SecondActivity
-        val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra("EXTRA_MESSAGE", "Hello, SecondActivity!")
-        startActivity(intent)
+        binding.btnNavigate.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("username", "Seif")
+                startActivity(intent)
+            finish()
+
+        }
+
 
         // Creating an implicit intent to share text content
-        val shareIntent = Intent().apply {
-            action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, "Hello, world!")
-            type = "text/plain"
+        binding.btnShare.setOnClickListener {
+            val shareIntent = Intent()
+                shareIntent.action = Intent.ACTION_SEND
+                shareIntent.putExtra(Intent.EXTRA_TEXT, "Hello Seif From our first app!")
+                shareIntent.type = "text/plain"
+
+            startActivity(Intent.createChooser(shareIntent, "Share With"))
+//            val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.BanqueMisr.MobileBanking&hl=en&gl=US"))
+//            startActivity(webIntent)
         }
-        startActivity(Intent.createChooser(shareIntent, "Share via"))
-        // Declare a general action such as ACTION_SEND.
         //Use Intent.createChooser for a chooser dialog.
+//
 
 
-
-
-
-        val intent3 = Intent(this, SecondActivity::class.java)
-        startForResult.launch(intent)
+//
+//        val intent3 = Intent(this, SecondActivity::class.java)
+//        startForResult.launch(intent3)
 
     }
 }

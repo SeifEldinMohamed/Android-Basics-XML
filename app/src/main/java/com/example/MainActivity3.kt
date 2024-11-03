@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.RadioButton
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,10 +15,12 @@ import com.example.firstsession.R
 import com.example.firstsession.databinding.ActivityMainSession3Binding
 
 class MainActivity3 : AppCompatActivity() {
+    private val binding = ActivityMainSession3Binding.inflate(layoutInflater)
     override fun onCreate(savedInstanceState: Bundle?) {
-        val binding = ActivityMainSession3Binding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        binding.toolbar.setTitle("Session3")
+
 
         setSupportActionBar(binding.toolbar)
 
